@@ -1,0 +1,44 @@
+.message {
+    display: flex;
+
+    justify-content: end;
+
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+}
+
+.imageAndText img {
+    /*border: green 1px solid;*/
+width: 63px;
+}
+
+.text {
+
+
+}
+
+.text:after {
+
+}
+
+.name {
+    /*border: yellow 1px solid;*/
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+
+
+}
+
+.messageText {
+    /*border: #cc0000 1px solid;*/
+    margin: 10px;
+}
+
+.time {
+    /*border: black 1px solid;*/
+}

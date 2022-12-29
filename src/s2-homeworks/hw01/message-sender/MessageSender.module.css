@@ -1,0 +1,21 @@
+.sendForm {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.textarea {
+
+}
+
+.button {
+
+}
+
+.button:hover {
+
+}
+.button:active {
+
+}

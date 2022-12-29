@@ -1,0 +1,37 @@
+.friendMessage {
+display: flex;
+    flex-direction: row-reverse;
+justify-content: start;
+
+}
+
+.friendImageAndText {
+display: flex;
+}
+
+.friendImageAndText img {
+    width: 63px;
+
+}
+
+.friendText {
+
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+    margin: 10px;
+
+}
+
+.friendMessageText {
+    margin: 10px;
+
+}
+
+.friendTime {
+
+}
