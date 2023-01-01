@@ -7,10 +7,10 @@ type GreetingContainerPropsType = {
     addUserCallback: (name: string) => void// need to fix any
 }
 
-export const pureAddUser = (name: string, setError: (error:string)=>void, setName: (name:string)=>void, addUserCallback: (name: string) => void) => {
+export const pureAddUser = (name: string, setError: (error: string) => void, setName: (name: string) => void, addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
     if (name.trim() === '') {
-setError('name')
+        setError('name')
         console.log('error')
     } else {
         console.log('here')
@@ -20,8 +20,8 @@ setError('name')
     }
 }
 
-export const pureOnBlur = (name: string, setError: (error:string)=>void) => { // если имя пустое - показать ошибку
-    if (name.trim() === ''){
+export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
+    if (name.trim() === '') {
         setError('name')
     }
 }
@@ -57,17 +57,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === 'Enter') {
             pureOnEnter(e, addUser)
-            setTotalUsers(totalUsers+1)
-            setLastUserName(name)
-
-        }
     }
-    const [totalUsers, setTotalUsers] = useState(0) // need to fix
-    const [lastUserName, setLastUserName] = useState('some name') // need to fix
-    // const totalUsers = 0 // need to fix
-    // const lastUserName = 'some name' // need to fix
+
+    const totalUsers = users.length // need to fix
+    const lastUserName = users.length>0?users[users.length-1].name:'' // need to fix
 
     return (
         <Greeting
