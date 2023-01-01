@@ -16,6 +16,7 @@ setError('name')
         console.log('here')
         addUserCallback(name)
         setName('')
+
     }
 }
 
@@ -56,13 +57,17 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
-
-
+        if (e.key === 'Enter') {
             pureOnEnter(e, addUser)
+            setTotalUsers(totalUsers+1)
+            setLastUserName(name)
 
+        }
     }
-    const totalUsers = 0 // need to fix
-    const lastUserName = 'some name' // need to fix
+    const [totalUsers, setTotalUsers] = useState(0) // need to fix
+    const [lastUserName, setLastUserName] = useState('some name') // need to fix
+    // const totalUsers = 0 // need to fix
+    // const lastUserName = 'some name' // need to fix
 
     return (
         <Greeting
