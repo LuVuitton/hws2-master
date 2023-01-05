@@ -2,15 +2,20 @@
 }
 
 .disabled {
+    border:3px solid #b99f1d;
+
 }
 
 .secondary {
+    border:3px solid #9600cc;
 }
 
 .default {
+    background: #001bcc;
 }
 
 .red {
+    background: #cc0000;
 }
 
 .default:hover {
