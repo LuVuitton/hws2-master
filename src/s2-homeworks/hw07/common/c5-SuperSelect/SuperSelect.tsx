@@ -4,7 +4,6 @@ import React, {
     ChangeEvent,
 } from 'react'
 import s from './SuperSelect.module.css'
-import {log} from "util";
 
 type DefaultSelectPropsType = DetailedHTMLProps<
     SelectHTMLAttributes<HTMLSelectElement>,
@@ -40,9 +39,8 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
 
         onChangeOption && onChangeOption(Number(e.currentTarget.value))
 
-
-
     }
+
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
 
